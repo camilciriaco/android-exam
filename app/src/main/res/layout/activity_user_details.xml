@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/profileBackground"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+          >
+
+            <!-- Your toolbar content goes here, such as buttons -->
+            <Button
+                android:id="@+id/button_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:layout_gravity="end"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/profilePrimaryDark"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleTextAppearance="@style/TransparentText"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/profile_bk"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="15dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                <ImageView
+                    android:src="@drawable/user"
+                    android:id="@+id/imageView_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="28dp"
+                    android:textStyle="bold"
+                    android:id="@+id/tv_name"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="developer@gmail.com"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:id="@+id/tv_emailProfile"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/headerText"
+                android:layout_marginBottom="20dp"
+                android:text="Person Details" />
+
+            <RelativeLayout style="@style/profileDetailsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    style="@style/profileDetailsTextMain"
+                    android:text="Mobile" />
+
+                <TextView
+                    style="@style/profileDetailsMiniText"
+                    android:text="+639124567890"
+                    android:id="@+id/tv_mobile"/>
+
+            </RelativeLayout>
+
+            <View style="@style/proifleDetailsView" />
+
+            <RelativeLayout style="@style/profileDetailsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    style="@style/profileDetailsTextMain"
+                    android:text="Age" />
+
+                <TextView
+                    style="@style/profileDetailsMiniText"
+                    android:text="20"
+                    android:id="@+id/tv_age"/>
+
+            </RelativeLayout>
+
+            <View style="@style/proifleDetailsView" />
+
+            <RelativeLayout style="@style/profileDetailsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+
+                <TextView
+                    style="@style/profileDetailsTextMain"
+                    android:text="Birthdate"
+                    />
+
+                <TextView
+                    style="@style/profileDetailsMiniText"
+                    android:text="june 3, 2003"
+                    android:id="@+id/tv_birthdate"/>
+
+            </RelativeLayout>
+
+            <View style="@style/proifleDetailsView" />
+
+            <RelativeLayout style="@style/profileDetailsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    style="@style/profileDetailsTextMain"
+                    android:text="Address"
+                    android:id="@+id/textaddress"/>
+
+                <TextView
+                    style="@style/profileDetailsMiniText"
+                    android:layout_below="@+id/textaddress"
+                    android:text="..."
+                    android:id="@+id/tv_address"/>
+
+            </RelativeLayout>
+
+            <View style="@style/proifleDetailsView" />
+
+            <RelativeLayout style="@style/profileDetailsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    style="@style/profileDetailsTextMain"
+                    android:text="Contact Person Phone" />
+
+                <TextView
+                    style="@style/profileDetailsMiniText"
+                    android:text=""
+                    android:id="@+id/tv_contactPerson"/>
+
+            </RelativeLayout>
+
+            <View style="@style/proifleDetailsView" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/image_view_avatar"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:src="@drawable/default_avatar"-->
+    <!--        android:layout_marginEnd="16dp" />-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_weight="1"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/text_view_name"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Full Name"-->
+    <!--            android:textSize="16sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:textColor="@color/black" />-->
+
+    <!--        &lt;!&ndash; Add more TextViews or other views for additional user information &ndash;&gt;-->
+
+    <!--    </LinearLayout>-->
+
+</LinearLayout>
